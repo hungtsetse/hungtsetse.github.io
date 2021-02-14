@@ -217,7 +217,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-02-14 12:02:39 / Modified: 16:01:56" itemprop="dateCreated datePublished" datetime="2021-02-14T12:02:39+08:00">2021-02-14</time>
+      <time title="Created: 2021-02-14 12:02:39 / Modified: 17:12:52" itemprop="dateCreated datePublished" datetime="2021-02-14T12:02:39+08:00">2021-02-14</time>
     </span>
 
   
@@ -240,13 +240,19 @@
 <p>There are many themes could be selected on <a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo/Theme</a>. Following only two steps could build your website with theme:</p>
 <ol>
 <li>Create a new folder with entire files of theme under <code>./themes</code> .</li>
-<li>Open <code>./_config.yml</code> and update variable of <code>theme: my-theme</code>.</li>
+<li>Open <code>./_config.yml</code> and update variable of <code>theme: &lt;theme&gt;</code>.</li>
 </ol>
-<h1 id="Build-Process"><a href="#Build-Process" class="headerlink" title="Build Process"></a>Build Process</h1><ol>
+<h1 id="Build"><a href="#Build" class="headerlink" title="Build"></a>Build</h1><ol>
 <li>Initialize a website<br><code>npx hexo init</code>  </li>
 <li>Create a new article<br><code>npx hexo new &lt;title&gt;</code></li>
 <li>Generate static files<br><code>npx hexo generate</code></li>
 <li>Start a server<br><code>npx hexo server</code></li>
+</ol>
+<h1 id="Deploy"><a href="#Deploy" class="headerlink" title="Deploy"></a>Deploy</h1><h2 id="GitHub-Pages"><a href="#GitHub-Pages" class="headerlink" title="GitHub Pages"></a>GitHub Pages</h2><ol>
+<li>Install <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-deployer-git">hexo-deployer-git</a></li>
+<li>Update <code>./_config.yml</code>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: https:&#x2F;&#x2F;github.com&#x2F;&lt;username&gt;&#x2F;&lt;project&gt;</span><br><span class="line">branch: &lt;branch&gt;</span><br></pre></td></tr></table></figure></li>
+<li>Execute <code>npx hexo clean &amp;&amp; npx hexo deploy</code></li>
+<li>Launch &lt;username&gt;.github.io</li>
 </ol>
 
       
